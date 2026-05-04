@@ -5,554 +5,331 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Art of Luxury Leasing — Tommy R. Angelucci</title>
 <meta name="author" content="Tommy R. Angelucci">
-<meta name="description" content="A practitioner's guide to running a world-class leasing office. By Tommy R. Angelucci, Leasing Director with 12+ years New York City new development experience.">
-
-<!-- Open Graph (LinkedIn, iMessage, Facebook, Slack) -->
+<meta name="description" content="A practitioner's complete guide to leasing, leadership, mindset, and mastery. By Tommy R. Angelucci.">
 <meta property="og:title" content="The Art of Luxury Leasing">
-<meta property="og:description" content="A practitioner's guide to running a world-class leasing office. By Tommy R. Angelucci.">
+<meta property="og:description" content="A practitioner's complete guide to leasing, leadership, mindset, and mastery. By Tommy R. Angelucci.">
 <meta property="og:type" content="article">
 <meta property="article:author" content="Tommy R. Angelucci">
-
-<!-- Twitter / X -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="The Art of Luxury Leasing">
-<meta name="twitter:description" content="A practitioner's guide to running a world-class leasing office. By Tommy R. Angelucci.">
-<meta name="twitter:creator" content="Tommy R. Angelucci">
+<meta name="twitter:description" content="A practitioner's complete guide to leasing, leadership, mindset, and mastery. By Tommy R. Angelucci.">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --gold: #C8A951;
-    --gold-light: #e8c96a;
-    --black: #0a0a0a;
-    --white: #fafaf8;
-    --cream: #f5f3ee;
-    --gray: #888;
-    --light-gray: #e8e4dc;
-  }
-
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ── COVER ── */
-  .cover {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 40px;
-    position: relative;
-    background: var(--black);
-    overflow: hidden;
-  }
-
-  .cover::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse at 50% 30%, rgba(200,169,81,0.08) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .cover-top-rule {
-    width: 1px;
-    height: 60px;
-    background: var(--gold);
-    margin: 0 auto 40px;
-    animation: growDown 1.2s ease forwards;
-    transform-origin: top;
-  }
-
-  @keyframes growDown {
-    from { transform: scaleY(0); opacity: 0; }
-    to   { transform: scaleY(1); opacity: 1; }
-  }
-
-  .cover-eyebrow {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.4em;
-    color: var(--gold);
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s forwards;
-  }
-
-  .cover-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 10vw, 88px);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    color: var(--white);
-    margin-bottom: 8px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s forwards;
-  }
-
-  .cover-title em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
-  .cover-rule {
-    width: 80px;
-    height: 1px;
-    background: var(--gold);
-    margin: 32px auto;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.9s forwards;
-  }
-
-  .cover-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(14px, 2.5vw, 18px);
-    font-weight: 300;
-    font-style: italic;
-    color: rgba(250,250,248,0.65);
-    max-width: 420px;
-    margin: 0 auto 48px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1.1s forwards;
-  }
-
-  .cover-author {
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1.3s forwards;
-  }
-
-  .cover-name {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--white);
-    margin-bottom: 6px;
-  }
-
-  .cover-creds {
-    font-size: 10px;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    color: var(--gray);
-    text-transform: uppercase;
-  }
-
-  .cover-scroll {
-    position: absolute;
-    bottom: 32px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1.8s forwards;
-  }
-
-  .cover-scroll span {
-    font-size: 9px;
-    letter-spacing: 0.3em;
-    color: var(--gray);
-    text-transform: uppercase;
-  }
-
-  .scroll-line {
-    width: 1px;
-    height: 40px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-    animation: pulse 2s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
-  }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── CONTENT ── */
-  .content {
-    background: var(--cream);
-    color: var(--black);
-  }
-
-  /* ── FOREWORD ── */
-  .foreword {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 80px 40px;
-    text-align: center;
-  }
-
-  .foreword-label {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.45em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 28px;
-  }
-
-  .foreword p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 2.5vw, 20px);
-    font-weight: 400;
-    line-height: 1.8;
-    color: #2a2a2a;
-    margin-bottom: 20px;
-  }
-
-  /* ── PARTS ── */
-  .part {
-    border-top: 1px solid var(--light-gray);
-  }
-
-  .part-inner {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 64px 40px;
-  }
-
-  .part-number {
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
-
-  .part-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(26px, 5vw, 38px);
-    font-weight: 500;
-    line-height: 1.15;
-    color: var(--black);
-    margin-bottom: 32px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--light-gray);
-  }
-
-  .part-body p {
-    font-size: clamp(14px, 1.8vw, 15.5px);
-    font-weight: 300;
-    line-height: 1.85;
-    color: #2a2a2a;
-    margin-bottom: 18px;
-  }
-
-  .callout {
-    margin: 36px 0 20px;
-    padding: 24px 28px;
-    border-left: 3px solid var(--gold);
-    background: white;
-  }
-
-  .callout p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(17px, 2.5vw, 21px) !important;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.6 !important;
-    color: var(--black) !important;
-    margin: 0 !important;
-  }
-
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 40px;
-    gap: 16px;
-  }
-
-  .divider-line {
-    flex: 1;
-    max-width: 120px;
-    height: 1px;
-    background: var(--light-gray);
-  }
-
-  .divider-diamond {
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    transform: rotate(45deg);
-  }
-
-  /* ── CLOSING ── */
-  .closing {
-    background: var(--black);
-    text-align: center;
-    padding: 100px 40px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .closing::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(ellipse at 50% 50%, rgba(200,169,81,0.07) 0%, transparent 65%);
-    pointer-events: none;
-  }
-
-  .closing-rule {
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    margin: 0 auto 40px;
-  }
-
-  .closing-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 5vw, 42px);
-    font-weight: 300;
-    color: var(--white);
-    margin-bottom: 12px;
-    letter-spacing: 0.02em;
-  }
-
-  .closing-title {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 24px;
-  }
-
-  .closing-contact {
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 0.1em;
-    color: rgba(250,250,248,0.5);
-  }
-
-  .closing-contact a {
-    color: rgba(250,250,248,0.5);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  .closing-contact a:hover {
-    color: var(--gold);
-  }
-
-  .closing-bottom-rule {
-    width: 60px;
-    height: 1px;
-    background: var(--gold);
-    margin: 40px auto 0;
-  }
-
-  /* ── MOBILE ── */
-  @media (max-width: 600px) {
-    .cover { padding: 60px 28px; }
-    .part-inner { padding: 48px 24px; }
-    .foreword { padding: 60px 24px; }
-    .callout { padding: 20px 20px; }
-    .closing { padding: 80px 24px; }
-  }
+  :root { --gold:#C8A951;--black:#0a0a0a;--white:#fafaf8;--cream:#f5f3ee;--gray:#888;--light-gray:#e8e4dc; }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--black);color:var(--white);font-family:'Montserrat',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;}
+  .cover{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:60px 40px;position:relative;background:var(--black);overflow:hidden;}
+  .cover::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 30%,rgba(200,169,81,.08) 0%,transparent 65%);pointer-events:none;}
+  .cover-top-rule{width:1px;height:60px;background:var(--gold);margin:0 auto 40px;animation:growDown 1.2s ease forwards;transform-origin:top;}
+  @keyframes growDown{from{transform:scaleY(0);opacity:0;}to{transform:scaleY(1);opacity:1;}}
+  .cover-eyebrow{font-size:10px;font-weight:600;letter-spacing:.4em;color:var(--gold);text-transform:uppercase;margin-bottom:20px;opacity:0;animation:fadeUp .8s ease .4s forwards;}
+  .cover-title{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,10vw,88px);font-weight:300;line-height:1.05;color:var(--white);margin-bottom:8px;opacity:0;animation:fadeUp .8s ease .6s forwards;}
+  .cover-title em{font-style:italic;color:var(--gold);}
+  .cover-rule{width:80px;height:1px;background:var(--gold);margin:32px auto;opacity:0;animation:fadeUp .8s ease .9s forwards;}
+  .cover-subtitle{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,2.5vw,18px);font-style:italic;color:rgba(250,250,248,.65);max-width:480px;margin:0 auto 48px;opacity:0;animation:fadeUp .8s ease 1.1s forwards;}
+  .cover-author{opacity:0;animation:fadeUp .8s ease 1.3s forwards;}
+  .cover-name{font-size:13px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--white);margin-bottom:6px;}
+  .cover-creds{font-size:10px;letter-spacing:.15em;color:var(--gray);text-transform:uppercase;}
+  .cover-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp .8s ease 1.8s forwards;}
+  .cover-scroll span{font-size:9px;letter-spacing:.3em;color:var(--gray);text-transform:uppercase;}
+  .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:.4;}50%{opacity:1;}}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  .toc{background:#111;padding:80px 40px;}
+  .toc-inner{max-width:680px;margin:0 auto;}
+  .toc-label{font-size:9px;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:36px;text-align:center;}
+  .toc-item{display:flex;align-items:baseline;justify-content:space-between;padding:12px 0;border-bottom:1px solid #222;text-decoration:none;color:rgba(250,250,248,.7);transition:color .2s;}
+  .toc-item:hover{color:var(--gold);}
+  .toc-part{font-size:9px;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);min-width:70px;}
+  .toc-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;flex:1;padding:0 16px;}
+  .content{background:var(--cream);color:var(--black);}
+  .foreword{max-width:680px;margin:0 auto;padding:80px 40px;text-align:center;}
+  .foreword-label{font-size:9px;font-weight:700;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;}
+  .foreword p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2.5vw,20px);line-height:1.8;color:#2a2a2a;margin-bottom:20px;}
+  .part{border-top:1px solid var(--light-gray);}
+  .part-inner{max-width:720px;margin:0 auto;padding:64px 40px;}
+  .part-number{font-size:9px;font-weight:700;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+  .part-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,5vw,38px);font-weight:500;line-height:1.15;color:var(--black);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--light-gray);}
+  .part-body p{font-size:clamp(14px,1.8vw,15.5px);font-weight:300;line-height:1.85;color:#2a2a2a;margin-bottom:18px;}
+  .part-body strong{font-weight:600;}
+  .callout{margin:36px 0 20px;padding:24px 28px;border-left:3px solid var(--gold);background:white;}
+  .callout p{font-family:'Cormorant Garamond',serif;font-size:clamp(17px,2.5vw,21px)!important;font-style:italic;line-height:1.6!important;color:var(--black)!important;margin:0!important;}
+  .chapter-break{background:var(--black);padding:80px 40px;text-align:center;position:relative;overflow:hidden;}
+  .chapter-break::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 50%,rgba(200,169,81,.06) 0%,transparent 65%);}
+  .chapter-break-rule{width:50px;height:1px;background:var(--gold);margin:0 auto 24px;}
+  .chapter-break-title{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,4vw,32px);font-style:italic;color:var(--white);margin-bottom:12px;}
+  .chapter-break-sub{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);}
+  .closing{background:var(--black);text-align:center;padding:100px 40px;position:relative;overflow:hidden;}
+  .closing::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 50%,rgba(200,169,81,.07) 0%,transparent 65%);}
+  .closing-rule{width:60px;height:1px;background:var(--gold);margin:0 auto 40px;}
+  .closing-name{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,5vw,42px);font-weight:300;color:var(--white);margin-bottom:12px;}
+  .closing-title{font-size:10px;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;}
+  .closing-contact{font-size:12px;font-weight:300;letter-spacing:.1em;color:rgba(250,250,248,.5);}
+  .closing-contact a{color:rgba(250,250,248,.5);text-decoration:none;transition:color .2s;}
+  .closing-contact a:hover{color:var(--gold);}
+  .closing-bottom-rule{width:60px;height:1px;background:var(--gold);margin:40px auto 0;}
+  @media(max-width:600px){.cover,.closing,.chapter-break{padding:60px 28px;}.part-inner,.foreword{padding:48px 24px;}.callout{padding:20px;}.toc{padding:60px 24px;}.toc-title{font-size:15px;}}
 </style>
 </head>
 <body>
 
-<!-- COVER -->
 <section class="cover">
   <div class="cover-top-rule"></div>
-  <p class="cover-eyebrow">A Practitioner's Guide</p>
+  <p class="cover-eyebrow">A Practitioner's Complete Guide</p>
   <h1 class="cover-title">The Art of<br><em>Luxury Leasing</em></h1>
   <div class="cover-rule"></div>
-  <p class="cover-subtitle">Running a World-Class Leasing Office</p>
+  <p class="cover-subtitle">Leasing. Leadership. Mindset. Mastery.</p>
   <div class="cover-author">
     <p class="cover-name">Tommy R. Angelucci</p>
-    <p class="cover-creds">Leasing Director &nbsp;·&nbsp; Licensed NY Realtor &nbsp;·&nbsp; 12+ Years New Development</p>
+    <p class="cover-creds">Licensed NYS Realtor &nbsp;·&nbsp; 12+ Years New Development</p>
   </div>
-  <div class="cover-scroll">
-    <span>Read</span>
-    <div class="scroll-line"></div>
-  </div>
+  <div class="cover-scroll"><span>Read</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- CONTENT -->
-<div class="content">
+<div class="toc">
+  <div class="toc-inner">
+    <p class="toc-label">Contents</p>
+    <a class="toc-item" href="#foreword"><span class="toc-part"></span><span class="toc-title">Foreword</span></a>
+    <a class="toc-item" href="#part1"><span class="toc-part">Part 1</span><span class="toc-title">Defining Luxury</span></a>
+    <a class="toc-item" href="#part2a"><span class="toc-part">Part 2A</span><span class="toc-title">Image & First Impression</span></a>
+    <a class="toc-item" href="#part2b"><span class="toc-part">Part 2B</span><span class="toc-title">The 90/10 Rule</span></a>
+    <a class="toc-item" href="#part3a"><span class="toc-part">Part 3A</span><span class="toc-title">The Presentation Itself</span></a>
+    <a class="toc-item" href="#part3b"><span class="toc-part">Part 3B</span><span class="toc-title">The Ask That Is Not an Ask</span></a>
+    <a class="toc-item" href="#part4"><span class="toc-part">Part 4</span><span class="toc-title">Follow-Up & Communication</span></a>
+    <a class="toc-item" href="#part5a"><span class="toc-part">Part 5A</span><span class="toc-title">Tell the Story of the Building</span></a>
+    <a class="toc-item" href="#part5b"><span class="toc-part">Part 5B</span><span class="toc-title">Know Your Competition and Respect It</span></a>
+    <a class="toc-item" href="#part5c"><span class="toc-part">Part 5C</span><span class="toc-title">Expectation Management</span></a>
+    <a class="toc-item" href="#part6"><span class="toc-part">Part 6</span><span class="toc-title">The Operational Mindset</span></a>
+    <a class="toc-item" href="#part7"><span class="toc-part">Part 7</span><span class="toc-title">Leadership</span></a>
+    <a class="toc-item" href="#part8"><span class="toc-part">Part 8</span><span class="toc-title">The Four Rules</span></a>
+    <a class="toc-item" href="#part9"><span class="toc-part">Part 9</span><span class="toc-title">Networking With Intention</span></a>
+    <a class="toc-item" href="#part10"><span class="toc-part">Part 10</span><span class="toc-title">Mindset</span></a>
+    <a class="toc-item" href="#part11"><span class="toc-part">Part 11</span><span class="toc-title">Embracing AI</span></a>
+    <a class="toc-item" href="#part12"><span class="toc-part">Part 12</span><span class="toc-title">The Long Game</span></a>
+  </div>
+</div>
 
-  <!-- FOREWORD -->
-  <div class="foreword">
+<div class="content">
+  <div class="foreword" id="foreword">
     <p class="foreword-label">Foreword</p>
     <p>This guide was not written from a classroom. It was built from over a decade of showing, closing, managing, and leading in some of New York City's most competitive rental markets.</p>
-    <p>What follows is not theory. It is the distilled truth of what separates average leasing from a luxury experience, refined across thousands of showings and buildings ranging from 364 to 958 units.</p>
+    <p>What follows is not theory. It is the distilled truth of what separates average from elite, refined across thousands of showings, hundreds of thousands of square feet, and every kind of person, building, and market condition imaginable.</p>
+    <p>This is not just a leasing guide. It is a guide for anyone who wants to operate at the highest level, lead with intention, and build a career that lasts.</p>
     <p>Read it with intent. Share it with your team. And hold yourself to it every single day.</p>
   </div>
 
-  <!-- PART 1 -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 1</p>
-      <h2 class="part-title">Defining Luxury</h2>
-      <div class="part-body">
-        <p>Luxury is not a price point. In over twelve years of leasing New York City residential apartments, from $1,000-a-month studios to $30,000-a-month penthouses, the one constant has been this: luxury is attention to detail. It is the ability to create a unique, memorable experience through attentiveness and genuine service.</p>
-        <p>That is the art of it. And it is a lost art. There is no written playbook for how to present and lease a high-end apartment. That gap is exactly what separates a good agent from an elite one. The elite agent understands that the experience they create, from the first phone call to the lease signing, is the product. Not the building. Not the amenities. The experience.</p>
-        <div class="callout"><p>If they walked through that door, they already want to be there. Your job is to give them permission to stay.</p></div>
-      </div>
-    </div>
+  <div class="chapter-break">
+    <div class="chapter-break-rule"></div>
+    <p class="chapter-break-title">The Art of Leasing</p>
+    <p class="chapter-break-sub">Parts 1 through 6</p>
   </div>
 
-  <!-- PART 2A -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 2A</p>
-      <h2 class="part-title">Image & First Impression</h2>
-      <div class="part-body">
-        <p>First impressions are not just visual. They are a silent language. And that language communicates everything to a high-net-worth individual before you say a single word.</p>
-        <p>It starts with how you dress. Not how much you spend, but how intentional you are. A well-fitted shirt. Polished shoes. A tie in a muted, settled color. These are signals. The knot matters. An Albert knot or a four-in-hand communicates precision and care. A loud tie or an ill-fitted suit communicates the opposite.</p>
-        <p>A dress shirt does not need to cost more than $25. A shoe shine does not cost more than $12 a week. The investment is small. The return is significant.</p>
-        <p>The same principle applies to scent. A smooth, understated cologne used with intention will register subconsciously. An overpowering scent will push people away. Neither the price nor the strength is the point. The point is whether it belongs in the room you are walking into.</p>
-        <p>Agents who do not prioritize their appearance are not lazy. They lack vision. They lack the structure and discipline to hold themselves accountable in the small things. And if you cannot hold yourself accountable in the small things, a high-net-worth client will sense it before you open your mouth.</p>
-        <div class="callout"><p>You are speaking before you speak. Dress like someone who deserves to be in that room.</p></div>
-      </div>
+  <div class="part" id="part1"><div class="part-inner">
+    <p class="part-number">Part 1</p>
+    <h2 class="part-title">Defining Luxury</h2>
+    <div class="part-body">
+      <p>Luxury is not a price point. In over twelve years of leasing New York City residential apartments, from $1,000-a-month studios to $30,000-a-month penthouses, the one constant has been this: luxury is attention to detail. It is the ability to create a unique, memorable experience through attentiveness and genuine service.</p>
+      <p>That is the art of it. And it is a lost art. There is no written playbook for how to present and lease a high-end apartment. That gap is exactly what separates a good agent from an elite one. The elite agent understands that the experience they create, from the first phone call to the lease signing, is the product. Not the building. Not the amenities. The experience.</p>
+      <p>Anyone can memorize square footage and amenity lists. Very few can walk into a room and make someone feel like they have already found their home. That feeling does not come from the apartment. It comes from you, from how you carry yourself, how you listen, and how you make the person in front of you feel like the most important person in the room.</p>
+      <div class="callout"><p>If they walked through that door, they already want to be there. Your job is to give them permission to stay.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 2B -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 2B</p>
-      <h2 class="part-title">Understanding the Client: The 90/10 Rule</h2>
-      <div class="part-body">
-        <p>The second half of presentation is not how you look. It is how you listen.</p>
-        <p>Whether you are leasing a luxury apartment, selling a high-end watch, or serving in any capacity where the client has options, your job is to ask questions. Ninety percent questions. Ten percent talking. You are not presenting until you understand what they need, what they value, and what they are trying to feel when they walk through that door.</p>
-        <p>This is where elite agents separate themselves. Anyone can show an apartment. Very few can make a person feel understood. Adapt to every client. Some will be quiet and analytical. Others will pepper you with questions. Your ability to read the room and adjust in real time is what closes deals at the high end.</p>
-      </div>
+  <div class="part" id="part2a"><div class="part-inner">
+    <p class="part-number">Part 2A</p>
+    <h2 class="part-title">Image & First Impression</h2>
+    <div class="part-body">
+      <p>First impressions are not just visual. They are a silent language. And that language communicates everything to a high-net-worth individual before you say a single word.</p>
+      <p>It starts with how you dress. Not how much you spend, but how intentional you are. A well-fitted shirt. Polished shoes. A tie in a muted, settled color. These are signals. The knot matters. An Albert knot or a four-in-hand communicates precision and care. A loud tie or an ill-fitted suit communicates the opposite.</p>
+      <p>A dress shirt does not need to cost more than $25. A shoe shine does not cost more than $12 a week. The investment is small. The return is significant.</p>
+      <p>The same principle applies to scent. A smooth, understated cologne used with intention will register subconsciously. An overpowering scent will push people away. Neither the price nor the strength is the point. The point is whether it belongs in the room you are walking into.</p>
+      <p>Agents who do not prioritize their appearance are not lazy. They lack vision. They lack the structure and discipline to hold themselves accountable in the small things. And if you cannot hold yourself accountable in the small things, a high-net-worth client will sense it before you open your mouth.</p>
+      <div class="callout"><p>You are speaking before you speak. Dress like someone who deserves to be in that room.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 3A -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 3A</p>
-      <h2 class="part-title">The Presentation Itself</h2>
-      <div class="part-body">
-        <p>Keep it simple. State the obvious. Not every client will give you the floor to run a full presentation, and that is okay. Never take it personally.</p>
-        <p>This is show business. The moment you walk into that space, you are a character. You are performing. Their attitude is not your fuel. You do not absorb it. You do not react to it. You stay warm, stay elegant, stay on message. In almost every case, the difficult client is not reacting to you. They are carrying something else entirely.</p>
-        <p>I have been spoken to poorly in showings. I kept my tone, my smile, and my composure. By the end, they felt it. They adjusted. No one can resist a truly elegant, well-delivered presentation. Hold your ground with grace.</p>
-        <p>Presentations are not one-size-fits-all. I have closed deals in ten minutes and spent ninety minutes earning someone's trust. From young renters to seasoned tenants, the through line is always the same: communication has to exist, and it has to be genuine.</p>
-        <div class="callout"><p>Always remain elegant. No one says no to a well-delivered presentation.</p></div>
-      </div>
+  <div class="part" id="part2b"><div class="part-inner">
+    <p class="part-number">Part 2B</p>
+    <h2 class="part-title">Understanding the Client: The 90/10 Rule</h2>
+    <div class="part-body">
+      <p>The second half of presentation is not how you look. It is how you listen.</p>
+      <p>Whether you are leasing a luxury apartment, selling a high-end watch, or serving in any capacity where the client has options, your job is to ask questions. Ninety percent questions. Ten percent talking. You are not presenting until you understand what they need, what they value, and what they are trying to feel when they walk through that door.</p>
+      <p>This is where elite agents separate themselves. Anyone can show an apartment. Very few can make a person feel understood. Adapt to every client. Some will be quiet and analytical. Others will pepper you with questions. Your ability to read the room and adjust in real time is what closes deals at the high end.</p>
+      <p>The prospect is telling you everything you need to know through their questions, their hesitations, the way they move through the space, and what they choose to comment on. Your job is to receive that information and use it. Not to talk over it.</p>
+      <div class="callout"><p>The best presentation you will ever give is the one where you barely spoke at all.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 3B -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 3B</p>
-      <h2 class="part-title">The Ask That Is Not an Ask</h2>
-      <div class="part-body">
-        <p>Do not ask for the application. State the next step.</p>
-        <p>"The next steps are the application. Here is how to apply."</p>
-        <p>That is it. You have asked without asking. You have removed the pressure and replaced it with direction. If they have any intention, they will surface it right there. And now you are in discovery mode, finding out where they are, what they need, and what is holding them back.</p>
-        <p>Your only job at that point is to help them justify a decision they already want to make. If someone walks through that door, they already want to be there. They are not looking for a reason to leave. They are looking for permission to stay.</p>
-      </div>
+  <div class="part" id="part3a"><div class="part-inner">
+    <p class="part-number">Part 3A</p>
+    <h2 class="part-title">The Presentation Itself</h2>
+    <div class="part-body">
+      <p>Keep it simple. State the obvious. Not every client will give you the floor to run a full presentation, and that is okay. Never take it personally.</p>
+      <p>This is show business. The moment you walk into that space, you are a character. You are performing. Their attitude is not your fuel. You do not absorb it. You do not react to it. You stay warm, stay elegant, stay on message. In almost every case, the difficult client is not reacting to you. They are carrying something else entirely.</p>
+      <p>I have been spoken to poorly in showings. I kept my tone, my smile, and my composure. By the end, they felt it. They adjusted. No one can resist a truly elegant, well-delivered presentation. Hold your ground with grace.</p>
+      <p>Presentations are not one-size-fits-all. I have closed deals in ten minutes and spent ninety minutes earning someone's trust. From young renters to seasoned tenants, the through line is always the same: communication has to exist, and it has to be genuine.</p>
+      <div class="callout"><p>Always remain elegant. No one says no to a well-delivered presentation.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 4 -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 4</p>
-      <h2 class="part-title">Follow-Up & Communication</h2>
-      <div class="part-body">
-        <p>Tone and timing are everything in follow-up.</p>
-        <p>After the showing: a thank you note. Brief, clean, intentional. A recap of the presentation. Then a follow-up one to two days later. A third touch a few days after that. Spaced. Thoughtful. Never stacked.</p>
-        <p>Think about it from the other side. If you received three follow-up emails in three days, how would that feel? It signals desperation. It erodes the elegance you built in the room.</p>
-        <p>The agents closing 35 to 45 percent of their traffic consistently, even on high volume, share one thing in common. There is elegance in their follow-up. The written communication mirrors the experience they created in person.</p>
-        <div class="callout"><p>Your email is an extension of your presentation. Treat it with the same care.</p></div>
-      </div>
+  <div class="part" id="part3b"><div class="part-inner">
+    <p class="part-number">Part 3B</p>
+    <h2 class="part-title">The Ask That Is Not an Ask</h2>
+    <div class="part-body">
+      <p>Do not ask for the application. State the next step.</p>
+      <p>"The next steps are the application. Here is how to apply."</p>
+      <p>That is it. You have asked without asking. You have removed the pressure and replaced it with direction. If they have any intention, they will surface it right there. And now you are in discovery mode, finding out where they are, what they need, and what is holding them back.</p>
+      <p>Your only job at that point is to help them justify a decision they already want to make. If someone walks through that door, they already want to be there. They are not looking for a reason to leave. They are looking for permission to stay.</p>
+      <div class="callout"><p>Close the deal. Don't hesitate. The ask is not pressure. It is service.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 5A -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 5A</p>
-      <h2 class="part-title">Tell the Story of the Building</h2>
-      <div class="part-body">
-        <p>Agents forget this constantly: talk about the ownership. Talk about the developer. Their portfolio, their vision, what they set out to build and why. This is not filler. This is the foundation of trust.</p>
-        <p>Renewal starts before someone ever submits an application. It starts in the presentation. You are setting a financial and emotional tone from the very first conversation. People want to ask about money, about ownership, about what they are really signing up for, but they will not always ask outright.</p>
-        <p>Your job is to answer the questions they have not asked yet. Vocalize who the ownership is. What your role is. What the management relationship looks like after they sign. That transparency builds confidence, and it builds loyalty.</p>
-      </div>
+  <div class="part" id="part4"><div class="part-inner">
+    <p class="part-number">Part 4</p>
+    <h2 class="part-title">Follow-Up & Communication</h2>
+    <div class="part-body">
+      <p>Tone and timing are everything in follow-up.</p>
+      <p>After the showing: a thank you note. Brief, clean, intentional. A recap of the presentation. Then a follow-up one to two days later. A third touch a few days after that. Spaced. Thoughtful. Never stacked.</p>
+      <p>Think about it from the other side. If you received three follow-up emails in three days, how would that feel? It signals desperation. It erodes the elegance you built in the room.</p>
+      <p>The agents closing 35 to 45 percent of their traffic consistently, even on high volume, share one thing in common. There is elegance in their follow-up. The written communication mirrors the experience they created in person.</p>
+      <div class="callout"><p>Your email is an extension of your presentation. Treat it with the same care.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 5B -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 5B</p>
-      <h2 class="part-title">Know Your Competition and Respect It</h2>
-      <div class="part-body">
-        <p>Know every competitor. Know what they offer, what they charge, where they are winning, and why people choose them over you. And when a prospect asks you directly, be honest.</p>
-        <p>Talking poorly about a competitor is one of the fastest ways to lose credibility. The answer is simple and it is honest: "They are a great building. We compete for the same traffic. At that point it comes down to personal taste, timing, and what resonates with the individual."</p>
-        <p>That answer closes more deals than any sales pitch. Honesty and transparency are more powerful than sugarcoating. Sugarcoating almost always backfires.</p>
-        <div class="callout"><p>Constructive honesty closes more deals than any pitch you will ever rehearse.</p></div>
-      </div>
+  <div class="part" id="part5a"><div class="part-inner">
+    <p class="part-number">Part 5A</p>
+    <h2 class="part-title">Tell the Story of the Building</h2>
+    <div class="part-body">
+      <p>Agents forget this constantly: talk about the ownership. Talk about the developer. Their portfolio, their vision, what they set out to build and why. This is not filler. This is the foundation of trust.</p>
+      <p>Renewal starts before someone ever submits an application. It starts in the presentation. You are setting a financial and emotional tone from the very first conversation. People want to ask about money, about ownership, about what they are really signing up for, but they will not always ask outright.</p>
+      <p>Your job is to answer the questions they have not asked yet. Vocalize who the ownership is. What your role is. What the management relationship looks like after they sign. That transparency builds confidence, and it builds loyalty.</p>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 5C -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 5C</p>
-      <h2 class="part-title">Expectation Management</h2>
-      <div class="part-body">
-        <p>Never overpromise. If you delivered a luxury experience from A to Z and management underdelivers after move-in, everything you built collapses. Your word becomes the liability.</p>
-        <p>Set clear expectations early. Response times. Maintenance timelines. What the management relationship looks like day to day. Something as simple as communicating a one to three business day response window goes a long way. It signals professionalism. It protects your credibility. And it earns the kind of trust that brings renewals.</p>
-      </div>
+  <div class="part" id="part5b"><div class="part-inner">
+    <p class="part-number">Part 5B</p>
+    <h2 class="part-title">Know Your Competition and Respect It</h2>
+    <div class="part-body">
+      <p>Know every competitor. Know what they offer, what they charge, where they are winning, and why people choose them over you. And when a prospect asks you directly, be honest.</p>
+      <p>Talking poorly about a competitor is one of the fastest ways to lose credibility. The answer is simple and it is honest: "They are a great building. We compete for the same traffic. At that point it comes down to personal taste, timing, and what resonates with the individual."</p>
+      <p>That answer closes more deals than any sales pitch. Honesty and transparency are more powerful than sugarcoating. Sugarcoating almost always backfires.</p>
+      <div class="callout"><p>Constructive honesty closes more deals than any pitch you will ever rehearse.</p></div>
     </div>
-  </div>
+  </div></div>
 
-  <!-- PART 6 -->
-  <div class="part">
-    <div class="part-inner">
-      <p class="part-number">Part 6</p>
-      <h2 class="part-title">The Operational Mindset</h2>
-      <div class="part-body">
-        <p>By year three or four, a serious agent should be shifting their thinking. The craft of leasing is no longer enough. The next level demands an operational mindset.</p>
-        <p>That means growing into senior management. Director. Regional Director. Vice President. The titles change, but the foundation is the same: you have mastered the art from A to Z. You have put in ten thousand hours or more. You have been thrown into different buildings, different markets, different systems, and you have figured it out every time.</p>
-        <p>Operational fluency means you speak the language of reporting. You understand occupancy, loss-to-lease, net effective rents, absorption rates, concession strategy, renewal spreads, and variance analysis. You can sit in a room with ownership or asset management and hold the conversation as a peer. You are not just executing. You are informing decisions.</p>
-        <p>Rome was not built in a day. Neither is a career at this level. The agent who refuses to evolve will cap out. The one who invests in their own seniority, studies the operation around them, and raises their hand for the harder problems, that is the one who moves up.</p>
-        <div class="callout"><p>Uprock yourself. That is the only requirement that cannot be taught.</p></div>
-      </div>
+  <div class="part" id="part5c"><div class="part-inner">
+    <p class="part-number">Part 5C</p>
+    <h2 class="part-title">Expectation Management</h2>
+    <div class="part-body">
+      <p>Never overpromise. If you delivered a luxury experience from A to Z and management underdelivers after move-in, everything you built collapses. Your word becomes the liability.</p>
+      <p>Set clear expectations early. Response times. Maintenance timelines. What the management relationship looks like day to day. Something as simple as communicating a one to three business day response window goes a long way. It signals professionalism. It protects your credibility. And it earns the kind of trust that brings renewals.</p>
     </div>
-  </div>
+  </div></div>
 
-</div><!-- end .content -->
+  <div class="part" id="part6"><div class="part-inner">
+    <p class="part-number">Part 6</p>
+    <h2 class="part-title">The Operational Mindset</h2>
+    <div class="part-body">
+      <p>By year three or four, a serious agent should be shifting their thinking. The craft of leasing is no longer enough. The next level demands an operational mindset.</p>
+      <p>That means growing into senior management. Director. Regional Director. Vice President. The titles change, but the foundation is the same: you have mastered the art from A to Z. You have put in ten thousand hours or more. You have been thrown into different buildings, different markets, different systems, and you have figured it out every time.</p>
+      <p>Operational fluency means you speak the language of reporting. You understand occupancy, loss-to-lease, net effective rents, absorption rates, concession strategy, renewal spreads, and variance analysis. You can sit in a room with ownership or asset management and hold the conversation as a peer. You are not just executing. You are informing decisions.</p>
+      <p>Rome was not built in a day. Neither is a career at this level. The agent who refuses to evolve will cap out. The one who invests in their own seniority, studies the operation around them, and raises their hand for the harder problems, that is the one who moves up.</p>
+      <div class="callout"><p>Uprock yourself. That is the only requirement that cannot be taught.</p></div>
+    </div>
+  </div></div>
+</div>
 
-<!-- CLOSING -->
+<div class="chapter-break">
+  <div class="chapter-break-rule"></div>
+  <p class="chapter-break-title">Leadership & Growth</p>
+  <p class="chapter-break-sub">Parts 7 through 12</p>
+</div>
+
+<div class="content">
+  <div class="part" id="part7"><div class="part-inner">
+    <p class="part-number">Part 7</p>
+    <h2 class="part-title">Leadership</h2>
+    <div class="part-body">
+      <p>Leadership comes in many forms. Some leaders are eloquent and polished. Others are strict, disciplined, and regimented. Some are kind and easygoing. There is no one-size-fits-all when it comes to being a leader. And if you are waiting to become one specific type before you step up, you are waiting too long.</p>
+      <p>But no matter what kind of leader you are or aspire to be, the most important quality to have is compassion. Not sympathy. Not softness. Compassion. The ability to understand where someone is coming from and use that understanding to bring out the best in them.</p>
+      <p>Lead by example. Be the first to step up and take the hit when things go wrong. A leader who deflects blame destroys trust instantly. A leader who absorbs it, learns from it, and corrects it builds loyalty that lasts years.</p>
+      <p>Learn to manage the emotions and strengths of the people on your team. Every person you lead is built differently. Some need direction. Some need space. Some need encouragement. Some need a standard to chase. Your job is to figure out which is which and use their unique qualities to the team's advantage.</p>
+      <p>Never dismiss someone because they are different. The agent who does not fit the typical mold is often the one who surprises you most. I love different. Because I am different. And the teams that win are rarely the most uniform. They are the most intentional.</p>
+      <div class="callout"><p>The best leaders are not the loudest in the room. They are the most present.</p></div>
+    </div>
+  </div></div>
+
+  <div class="part" id="part8"><div class="part-inner">
+    <p class="part-number">Part 8</p>
+    <h2 class="part-title">The Four Rules</h2>
+    <div class="part-body">
+      <p>Titles change. The rules do not.</p>
+      <p>I have seen this at every level in real estate, from leasing teams to operations to senior leadership. The people and teams that win are not always the most talented. They are the ones who master four things and refuse to operate without them.</p>
+      <p><strong>Urgency.</strong> Move fast. In this industry, hesitation costs leases, costs relationships, and costs trust. When a prospect reaches out, respond. When a problem surfaces, address it. When an opportunity presents itself, act. The window is almost always shorter than it looks.</p>
+      <p><strong>Efficiency.</strong> Work smart. Know where your time creates the most value and protect that time aggressively. A busy agent and a productive agent are not the same thing. The best operators are not the ones who work the most hours. They are the ones who waste the fewest.</p>
+      <p><strong>Competency.</strong> Know your craft. Know your market. Know your numbers. Know your building. There is no substitute for genuine expertise. In a room full of people performing competence, the person with real knowledge stands out immediately.</p>
+      <p><strong>Transparency.</strong> Be honest. With your team, your clients, your ownership, and yourself. Transparency builds trust faster than anything else. And trust, at every level of this business, is the only currency that never loses value.</p>
+      <div class="callout"><p>Urgency. Efficiency. Competency. Transparency. Master these four and every level becomes possible.</p></div>
+    </div>
+  </div></div>
+
+  <div class="part" id="part9"><div class="part-inner">
+    <p class="part-number">Part 9</p>
+    <h2 class="part-title">Networking With Intention</h2>
+    <div class="part-body">
+      <p>One challenge I will put to every agent and director in this industry: network with intention. Build relationships for the future, not just for when you need something.</p>
+      <p>If you only network when you are in need, it comes across as desperate and disingenuous. The person on the other side of that conversation has seen it before. They can feel when they are being contacted out of necessity versus when someone is genuinely interested in building a relationship.</p>
+      <p>Real networking is about value. What you can offer. How you can contribute. How you show up consistently, not transactionally. The developer who hears from you regularly, not just when you need a referral, is the one who thinks of you first when an opportunity opens up.</p>
+      <p>Relationships compound when they are built with patience and purpose. Show up at industry events. Send a congratulations when someone gets promoted. Share a resource with no expectation of return. These are small investments with compounding returns.</p>
+      <div class="callout"><p>Build relationships before you need them. The best opportunities come from people who already know who you are.</p></div>
+    </div>
+  </div></div>
+
+  <div class="part" id="part10"><div class="part-inner">
+    <p class="part-number">Part 10</p>
+    <h2 class="part-title">Mindset</h2>
+    <div class="part-body">
+      <p>Life responds to the mindset you bring to it.</p>
+      <p>Your physical, financial, and social condition is a direct reflection of your thoughts. If you have your health, you already have the most important foundation. But having health alone is not enough. You need a financial plan, a clear vision, and structure that allows you to develop your full potential.</p>
+      <p>Your current situation begins with your mindset. If you want change, whether financial, physical, or spiritual, you must first transform the way you think. The mental infrastructure you build today becomes the foundation of the results you will see tomorrow.</p>
+      <p>There is a saying that goes: everyone wants to go to heaven, but nobody wants to die. In the same way, everyone wants to be successful, but few are willing to plan, structure, and be patient. Most people do not fail because they plan to fail. They fail because they fail to plan.</p>
+      <p>Plan your life. Stay organized. Act with purpose. And when things do not go according to plan, adjust the strategy without adjusting the standard. Life is built for the brave. Only those with structure and mental clarity will endure.</p>
+      <div class="callout"><p>The mental infrastructure you build today becomes the foundation of the results you see tomorrow.</p></div>
+    </div>
+  </div></div>
+
+  <div class="part" id="part11"><div class="part-inner">
+    <p class="part-number">Part 11</p>
+    <h2 class="part-title">Embracing AI</h2>
+    <div class="part-body">
+      <p>About three years ago, an executive I worked closely with said something that stuck with me: "AI is the most amazing thing that has ever happened to real estate." I adopted that mindset early on. And since then I have added my own belief.</p>
+      <p>AI will not replace humans. But humans who do not know how to use AI will be replaced by those who do.</p>
+      <p>This is not a threat. It is an opportunity. The agents and directors who learn to use AI tools for market research, reporting, communication, pricing analysis, and operations will have a significant advantage over those who resist it. And that advantage will only grow.</p>
+      <p>Some jobs will be eliminated. That is the reality of every major technological shift in history. What AI will never eliminate is the human ability to connect, to lead, and to build trust. That is irreplaceable. Which is exactly why the agents who will thrive are the ones who combine genuine human skill with technological leverage.</p>
+      <p>Evolve. Sharpen your skills. Learn the tools. Use every advantage available to you. That is what operators do.</p>
+      <div class="callout"><p>AI will not replace you. But someone who uses it better than you might. Start today.</p></div>
+    </div>
+  </div></div>
+
+  <div class="part" id="part12"><div class="part-inner">
+    <p class="part-number">Part 12</p>
+    <h2 class="part-title">The Long Game</h2>
+    <div class="part-body">
+      <p>Ten years in this industry taught me more than I could have learned anywhere else. It was a journey filled with more failures than successes. More moments of doubt than moments of certainty. And more lessons than I ever expected.</p>
+      <p>Through it all, the mindset that carried me was one of continuous improvement. Small adjustments made significant impacts on my growth. A different approach to a follow-up. A refined way of presenting a floor plan. A better question to ask in the first sixty seconds of a showing. None of those changes were dramatic. All of them compounded.</p>
+      <p>There were times I considered giving up. Times when the market was difficult, the team was struggling, and the numbers were not where they needed to be. But every challenge and every person we encounter is meant to shape us and push us toward something greater. Nothing is wasted if you are paying attention.</p>
+      <p>My biggest takeaway from over a decade in this business is this: always approach each day with humility and a beginner's mentality. No matter how experienced or accomplished you become, there is always room to learn, improve, and grow. The moment you think you have it figured out is the moment you start going backward.</p>
+      <p>I am grateful for the strength, the health, and the wisdom that have guided me this far. And I am just getting started. The next ten years will be built on everything the first ten taught me. That is the long game. And it is the only game worth playing.</p>
+      <div class="callout"><p>Approach every day with humility and a beginner's mentality. There is always more to learn. Always.</p></div>
+    </div>
+  </div></div>
+</div>
+
 <section class="closing">
   <div class="closing-rule"></div>
   <p class="closing-name">Tommy R. Angelucci</p>
-  <p class="closing-title">Leasing Director &nbsp;·&nbsp; Licensed NY Realtor</p>
+  <p class="closing-title">Licensed NYS Realtor</p>
   <p class="closing-contact">917-819-9026 &nbsp;·&nbsp; <a href="mailto:angeluccitommy@icloud.com">angeluccitommy@icloud.com</a></p>
   <div class="closing-bottom-rule"></div>
 </section>
