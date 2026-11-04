@@ -70,16 +70,48 @@
   .closing-contact a:hover{color:var(--gold);}
   .closing-bottom-rule{width:60px;height:1px;background:var(--gold);margin:40px auto 0;}
   @media(max-width:600px){.cover,.closing,.chapter-break{padding:60px 28px;}.part-inner,.foreword{padding:48px 24px;}.callout{padding:20px;}.toc{padding:60px 24px;}.toc-title{font-size:15px;}}
+
+  /* Opening experience only; the guide below retains its original styles. */
+  .cover{min-height:100svh;padding:100px 32px 140px;isolation:isolate;background:#101c2b;}
+  .cover-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;z-index:-2;animation:skylineZoom 24s cubic-bezier(.2,.4,.4,1) forwards;}
+  .cover::before{z-index:-1;background:linear-gradient(180deg,rgba(4,12,24,.25),rgba(4,12,24,.42) 45%,rgba(4,12,24,.78));}
+  .cover-title{font-size:clamp(40px,7.4vw,104px);letter-spacing:.035em;line-height:1.03;color:#fff;max-width:1100px;text-shadow:0 2px 28px rgba(0,0,0,.3);}
+  .cover-title span{display:block;}
+  .cover-title .cover-title-intro{font-size:.46em;letter-spacing:.2em;margin-bottom:18px;}
+  .cover-subtitle{font-size:clamp(19px,2.1vw,25px);line-height:1.5;color:#fff;max-width:650px;margin-bottom:40px;}
+  .cover-eyebrow{color:rgba(255,255,255,.85);}
+  .cover-creds,.cover-scroll span{color:rgba(255,255,255,.82);}
+  .cover-scroll{animation:coverReadFade .8s ease 1.8s both;}
+  .cover-scroll .scroll-line{animation:none;}
+  @keyframes skylineZoom{from{transform:scale(1);}to{transform:scale(1.1);}}
+  @keyframes coverReadFade{from{opacity:0;}to{opacity:1;}}
+  @media(max-width:600px){
+    .cover{padding:64px 24px 124px;}
+    .cover-image{object-position:52% 50%;}
+    .cover-top-rule{height:36px;margin-bottom:28px;}
+    .cover-eyebrow{font-size:8px;letter-spacing:.22em;}
+    .cover-title{font-size:clamp(36px,10.5vw,62px);}
+    .cover-title .cover-title-intro{letter-spacing:.16em;}
+    .cover-rule{margin:24px auto;}
+    .cover-subtitle{font-size:20px;margin-bottom:28px;}
+    .cover-creds{font-size:8px;line-height:1.8;}
+    .cover-scroll{bottom:24px;}
+  }
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .cover-image,.cover *{animation:none!important;opacity:1;}
+  }
 </style>
 </head>
 <body>
 
-<section class="cover">
+<section class="cover" aria-labelledby="cover-heading">
+  <img class="cover-image" src="assets/nyc-blue-hour.jpg" alt="" fetchpriority="high" decoding="async" width="1672" height="941">
   <div class="cover-top-rule"></div>
   <p class="cover-eyebrow">A Practitioner's Complete Guide</p>
-  <h1 class="cover-title">The Art of<br><em>Luxury Leasing</em></h1>
+  <h1 class="cover-title" id="cover-heading"><span class="cover-title-intro">THE ART OF</span><span>LUXURY LEASING</span></h1>
   <div class="cover-rule"></div>
-  <p class="cover-subtitle">Leasing. Leadership. Mindset. Mastery.</p>
+  <p class="cover-subtitle">Where Strategy, Human Connection, and Performance Meet.</p>
   <div class="cover-author">
     <p class="cover-name">Tommy R. Angelucci</p>
     <p class="cover-creds">Licensed NYS Realtor &nbsp;·&nbsp; 12+ Years New Development</p>
